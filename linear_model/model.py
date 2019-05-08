@@ -54,11 +54,3 @@ class MinMaxScaler:
     
     def fit_transform(self, X):
         return self.fit(X).transform(X)
-
-def mean_absolute_error(y,yh):
-    return np.abs(y-yh).mean()
-
-def rmsle(real, predicted):
-    p = np.log1p(predicted)
-    r = np.log1p(real)
-    return (((p-r)**2).sum()/len(predicted))**0.5
