@@ -11,7 +11,7 @@ ML_Researcher is a Python module in which you can learn internal machine learnin
 
 ## Usage
 
-'''python
+```python
 import numpy as np
 from linear_model import LinearRegression
 X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])
@@ -20,4 +20,4 @@ y = np.dot(X, np.array([1, 2])) + 3
 lr = LinearRegression().fit(X, y)
 reg.predict(np.array([[3, 5]]))
 array([16.])
-'''
+```
