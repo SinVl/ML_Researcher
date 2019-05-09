@@ -1,7 +1,7 @@
 import numpy as np
 
 class LinearRegression:
-    def fit(self, X, y, learning_rate=0.003, iteration= 100000, eps = 0.1):
+    def fit(self, X, y, learning_rate = 0.003, iteration = 100000, eps = 1e-10):
         self.X = np.array(X)
         self.y = np.array(y)
         self.w = np.random.sample((self.X.shape[1]+1,))
@@ -18,6 +18,7 @@ class LinearRegression:
             if(np.abs(self.w - w).mean() < self.eps):
                 break
             self.w = w
+
         return self
 
     def predict(self, X):
